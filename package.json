@@ -1,0 +1,49 @@
+{
+  "name": "vite-antd-admin",
+  "version": "1.0.0",
+  "description": "vue3 vite2 ant-design-vue admin template",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qq157788394/vite-antd-admin.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/qq157788394/vite-antd-admin/issues"
+  },
+  "homepage": "https://github.com/qq157788394/vite-antd-admin#readme",
+  "dependencies": {
+    "@meforma/vue-copy-to-clipboard": "^0.0.1",
+    "ant-design-vue": "^2.2.0-beta.4",
+    "axios": "^0.21.1",
+    "vue": "^3.0.5",
+    "vue-router": "^4.0.9"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^1.2.3",
+    "@vue/compiler-sfc": "^3.0.5",
+    "eslint": "^7.28.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-promise": "^5.1.0",
+    "eslint-plugin-standard": "^5.0.0",
+    "eslint-plugin-vue": "^7.11.1",
+    "less": "^4.1.1",
+    "prettier": "^2.3.1",
+    "prettier-eslint": "^12.0.0",
+    "sass": "^1.35.1",
+    "stylus": "^0.54.8",
+    "vite": "^2.3.7",
+    "vite-plugin-components": "^0.11.2",
+    "vite-plugin-pages": "^0.13.2",
+    "vite-plugin-vue-layouts": "^0.3.1"
+  }
+}
