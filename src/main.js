@@ -2,7 +2,8 @@ import { createApp } from 'vue'
 import { createRouter, createWebHashHistory } from 'vue-router'
 import { setupLayouts } from 'virtual:generated-layouts'
 import generatedRoutes from 'virtual:generated-pages'
-import Plugins from './Plugins'
+import Plugins from './plugins'
+import Utilis from './utilis'
 import App from './App.vue'
 
 const routes = setupLayouts(generatedRoutes)
@@ -29,5 +30,6 @@ const app = createApp(App)
 
 app.use(router)
 app.use(Plugins)
+app.use(Utilis)
 
 app.mount('#app')
