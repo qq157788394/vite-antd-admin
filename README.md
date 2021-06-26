@@ -11,3 +11,5 @@ vue3 vite2 ant-design-vue admin template
 - [x] vite-plugin-pages、vite-plugin-vue-layouts、vite-plugin-components 三件套
 - [x] vue-copy-to-clipboard 剪贴板
 - [x] axios 和 API 封装
+- [x] 手机号、身份证号表单验证
+- [x] 货币的常用处理方法
