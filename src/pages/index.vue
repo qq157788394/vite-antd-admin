@@ -5,13 +5,15 @@
   <a-button type="primary" @click="yuan2fen">元转分</a-button>
   <a-button type="primary" @click="fen2yuan">分转元</a-button>
   <a-button type="primary" @click="CNY">人民币</a-button>
+  <a-button type="primary" @click="isMobile">手机号</a-button>
 </template>
 
 <script>
 export default {
   data() {
     return {
-      amount: '120000000'
+      amount: '120000000',
+      mobile: '1662873919'
     }
   },
   mounted() {},
@@ -40,6 +42,16 @@ export default {
 
     CNY() {
       console.log(this.$CNY(this.amount, 3, null))
+    },
+
+    isMobile() {
+      this.$isMobile(this.mobile)
+        .then(() => {
+          console.log('手机号对了')
+        })
+        .catch(() => {
+          console.log('错')
+        })
     }
   }
 }

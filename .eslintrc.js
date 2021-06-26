@@ -8,7 +8,7 @@ module.exports = {
   extends: ['plugin:vue/vue3-recommended', 'standard', 'prettier'],
   parserOptions: {},
   rules: {
-    'no-console': import.meta.env.MODE === 'production' ? 'warn' : 'off',
-    'no-debugger': import.meta.env.MODE === 'production' ? 'warn' : 'off'
+    // 'no-console': import.meta.env.MODE === 'production' ? 'warn' : 'off',
+    // 'no-debugger': import.meta.env.MODE === 'production' ? 'warn' : 'off'
   }
 }
