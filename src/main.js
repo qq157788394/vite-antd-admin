@@ -2,6 +2,7 @@ import { createApp } from 'vue'
 import { createRouter, createWebHashHistory } from 'vue-router'
 import { setupLayouts } from 'virtual:generated-layouts'
 import generatedRoutes from 'virtual:generated-pages'
+import store from './store'
 import Plugins from './plugins'
 import Utilis from './utilis'
 import App from './App.vue'
@@ -28,6 +29,7 @@ const router = createRouter({
 
 const app = createApp(App)
 
+app.use(store)
 app.use(router)
 app.use(Plugins)
 app.use(Utilis)
