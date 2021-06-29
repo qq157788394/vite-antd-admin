@@ -1,64 +1,35 @@
 <template>
-  <a-button type="primary" @click="currency">index pages</a-button>
-  <div class="text">我是绿色的</div>
+  <div style="width: 350px">
+    <h4 class="mt-1">周中日期选择器</h4>
+    <sm-select-weekday class="w-100"></sm-select-weekday>
 
-  <a-button type="primary" @click="yuan2fen">元转分</a-button>
-  <a-button type="primary" @click="fen2yuan">分转元</a-button>
-  <a-button type="primary" @click="CNY">人民币</a-button>
-  <a-button type="primary" @click="isMobile">手机号</a-button>
+    <h4 class="mt-1">月中日期选择器</h4>
+    <sm-select-day class="w-100"></sm-select-day>
+
+    <h4 class="mt-1">门店选择器</h4>
+    <sm-select-branch class="w-100"></sm-select-branch>
+
+    <h4 class="mt-1">会员等级选择器</h4>
+    <sm-select-member-level class="w-100"></sm-select-member-level>
+
+    <h4 class="mt-1">智能分群级联选择器</h4>
+    <sm-select-crowd class="w-100"></sm-select-crowd>
+
+    <h4 class="mt-1">门店及分支机构选择器</h4>
+    <sm-tree-branch></sm-tree-branch>
+  </div>
 </template>
 
 <script>
-export default {
-  data() {
-    return {
-      amount: '120000000',
-      mobile: '1662873919'
-    }
-  },
-  mounted() {},
-  methods: {
-    copy() {
-      this.$copyText('Text to copy')
-        .then(() => {
-          console.log('copied!')
-        })
-        .catch(() => {
-          console.log(`can't copy`)
-        })
-    },
-    currency() {
-      // console.log(this.$CNY(this.amount).format())
-      console.log(this.$currency(this.amount, 'fen').cny())
-    },
-
-    yuan2fen() {
-      console.log(this.$yuan2fen(this.amount))
-    },
-
-    fen2yuan() {
-      console.log(this.$fen2yuan(this.amount))
-    },
-
-    CNY() {
-      console.log(this.$CNY(this.amount, 3, null))
-    },
-
-    isMobile() {
-      this.$isMobile(this.mobile)
-        .then(() => {
-          console.log('手机号对了')
-        })
-        .catch(() => {
-          console.log('错')
-        })
-    }
-  }
-}
+export default {}
 </script>
 
 <style lang="less">
-.text {
-  color: @primary-color;
+.mt-1 {
+  padding-top: 1rem;
+}
+
+.w-100 {
+  width: 100%;
 }
 </style>
