@@ -14,7 +14,7 @@ export default {
   name: 'SmSelectCrowd',
   data() {
     return {
-      value: '',
+      value: [],
       placeholder: '请选择智能分群',
       options: [
         {

@@ -1,6 +1,14 @@
 <template>
   <a-input-search v-model:value="searchValue" style="margin-bottom: 8px" placeholder="请输入分支机构 / 分店名称" />
-  <a-tree checkable multiple :tree-data="treeData" defaultExpandAll showLine v-model:value="value"></a-tree>
+  <a-tree
+    checkable
+    multiple
+    :selectable="false"
+    :tree-data="treeData"
+    defaultExpandAll
+    v-model:selectedKeys="selectedKeys"
+    showLine
+  ></a-tree>
 </template>
 
 <script>
@@ -8,7 +16,7 @@ export default {
   name: 'SmTreeBranch',
   data() {
     return {
-      value: [],
+      selectedKeys: [],
       searchValue: '',
       treeData: [
         {

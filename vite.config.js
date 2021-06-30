@@ -12,7 +12,8 @@ export default defineConfig({
       less: {
         // 使用 less 提供的 modifyVars 的方式进行覆盖变量，改变antd的主题
         modifyVars: {
-          'primary-color': '#00b9b2'
+          'primary-color': '#00b9b2', // 主色
+          'layout-header-background': '#001e21' // 深色导航的背景色
         },
         // 全局通用样式变量也可以写在这里
         globalVars: {
