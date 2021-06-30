@@ -1,3 +1,8 @@
+<route lang="yaml">
+meta:
+  layout: home
+</route>
+
 <template>
   <div style="width: 350px">
     <h4 class="mt-1">周中日期选择器</h4>
