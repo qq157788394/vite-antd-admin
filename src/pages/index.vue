@@ -23,8 +23,10 @@ meta:
     <h4 class="mt-1">门店及分支机构选择器</h4>
     <sm-tree-branch></sm-tree-branch>
 
-    <h4 class="mt-1">一级导航</h4>
-    <sm-menu-1></sm-menu-1>
+    <icon-park type="bill" theme="filled" />
+
+    <icon-park-bill theme="outline" />
+    <icon-park-bill theme="filled" />
   </div>
 </template>
 

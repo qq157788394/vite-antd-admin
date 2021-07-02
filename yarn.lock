@@ -2,16 +2,6 @@
 # yarn lockfile v1
 
 
-"@ant-design-vue/use@^0.0.1-0":
-  version "0.0.1-alpha.10"
-  resolved "https://registry.yarnpkg.com/@ant-design-vue/use/-/use-0.0.1-alpha.10.tgz#14697ced4aa3e6d76a63008e87dbf6d3ef3e07da"
-  integrity sha512-og9a6Glx3X/8WHPasTTNRBPg+e5Jsp6J7gKH2dQ1/HDvMTYP/BCy08HrUfvTk9crkGc0kbxDmY+7M8KEtC80zw==
-  dependencies:
-    async-validator "^3.4.0"
-    lodash-es "^4.17.15"
-    resize-observer-polyfill "^1.5.1"
-    vue "^3.0.0"
-
 "@ant-design/colors@^5.0.0":
   version "5.1.1"
   resolved "https://registry.yarnpkg.com/@ant-design/colors/-/colors-5.1.1.tgz#800b2186b1e27e66432e67d03ed96af3e21d8940"
@@ -94,6 +84,11 @@
     js-yaml "^3.13.1"
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
+
+"@icon-park/vue-next@^1.3.3":
+  version "1.3.3"
+  resolved "https://registry.yarnpkg.com/@icon-park/vue-next/-/vue-next-1.3.3.tgz#18f60a527651f4527a01056344ece2db7c65b309"
+  integrity sha512-0Aykt/2eqrJcPTc79wdBPMO2JVBV46vfuiJVUcVzmhx/a/IRQN45p9+Hyhj2TSW0NP/obl+CCsThj+STBEkQjA==
 
 "@meforma/vue-copy-to-clipboard@^0.0.1":
   version "0.0.1"
@@ -360,12 +355,11 @@ ansi-styles@^4.0.0, ansi-styles@^4.1.0:
   dependencies:
     color-convert "^2.0.1"
 
-ant-design-vue@^2.2.0-beta.4:
-  version "2.2.0-beta.4"
-  resolved "https://registry.yarnpkg.com/ant-design-vue/-/ant-design-vue-2.2.0-beta.4.tgz#acd4a62fa06dcae9bce60bd6a30b3bd32a249f6b"
-  integrity sha512-QDKKSeXVKDj/oKeZ24kXi8/ViQgugXpo47bZIGTK8njwgzYkMXSxuR5iq4tYPn7umtP4M8oWaV9Dt7qT3kds1w==
+ant-design-vue@^2.2.0-rc.1:
+  version "2.2.0-rc.1"
+  resolved "https://registry.yarnpkg.com/ant-design-vue/-/ant-design-vue-2.2.0-rc.1.tgz#5e32e102c64f517d469c7af403cd6133b4ac8b45"
+  integrity sha512-cRqOpPrw6aoW+1LmMMf8cFlVKzhBSrmZUCfEn8jA1yp7gp6zj+wGkhT9jz6NUfPWRXmGgbf0hXi0rHkhWaFAOQ==
   dependencies:
-    "@ant-design-vue/use" "^0.0.1-0"
     "@ant-design/icons-vue" "^6.0.0"
     "@babel/runtime" "^7.10.5"
     "@simonwep/pickr" "~1.8.0"
@@ -427,7 +421,7 @@ astral-regex@^2.0.0:
   resolved "https://registry.yarnpkg.com/astral-regex/-/astral-regex-2.0.0.tgz#483143c567aeed4785759c0865786dc77d7d2e31"
   integrity sha512-Z7tMw1ytTXt5jqMcOP+OQteU1VuNK9Y02uuJtKQ1Sv69jXQKKg5cibLwGJow8yzZP+eAc18EmLGPal0bp36rvQ==
 
-async-validator@^3.3.0, async-validator@^3.4.0:
+async-validator@^3.3.0:
   version "3.5.2"
   resolved "https://registry.yarnpkg.com/async-validator/-/async-validator-3.5.2.tgz#68e866a96824e8b2694ff7a831c1a25c44d5e500"
   integrity sha512-8eLCg00W9pIRZSB781UUX/H6Oskmm8xloZfr09lz5bikRpBVDlJ3hRVuxxP1SxcwsEYfJ4IU8Q19Y8/893r3rQ==
@@ -2080,11 +2074,6 @@ require-relative@^0.8.7:
   resolved "https://registry.yarnpkg.com/require-relative/-/require-relative-0.8.7.tgz#7999539fc9e047a37928fa196f8e1563dabd36de"
   integrity sha1-eZlTn8ngR6N5KPoZb44VY9q9Nt4=
 
-resize-observer-polyfill@^1.5.1:
-  version "1.5.1"
-  resolved "https://registry.yarnpkg.com/resize-observer-polyfill/-/resize-observer-polyfill-1.5.1.tgz#0e9020dd3d21024458d4ebd27e23e40269810464"
-  integrity sha512-LwZrotdHOo12nQuZlHEmtuXdqGoOD0OhaxopaNFxWzInpEgaLWoVuAMbTzixuosCx2nEG58ngzW3vxdWoxIgdg==
-
 resolve-from@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/resolve-from/-/resolve-from-4.0.0.tgz#4abcd852ad32dd7baabfe9b40e00a36db5f392e6"
@@ -2555,7 +2544,7 @@ vue-types@^3.0.0:
   dependencies:
     is-plain-object "3.0.1"
 
-vue@^3.0.0, vue@^3.0.11, vue@^3.0.5:
+vue@^3.0.11, vue@^3.0.5:
   version "3.1.2"
   resolved "https://registry.yarnpkg.com/vue/-/vue-3.1.2.tgz#647f8e3949a3d600771dca25d50225dc3e594c64"
   integrity sha512-q/rbKpb7aofax4ugqu2k/uj7BYuNPcd6Z5/qJtfkJQsE0NkwVoCyeSh7IZGH61hChwYn3CEkh4bHolvUPxlQ+w==
