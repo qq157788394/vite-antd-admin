@@ -5,7 +5,7 @@
     </a-layout-header>
 
     <a-layout-content class="menu2-layout-content">
-      <a-menu mode="inline" theme="light" v-model:selectedKeys="selectedKeys">
+      <a-menu v-model:selectedKeys="selectedKeys" mode="inline" theme="light">
         <a-menu-item v-for="item in 20" :key="item">{{ `二级导航${item}` }}</a-menu-item>
       </a-menu>
     </a-layout-content>

@@ -1,9 +1,14 @@
 <template>
   <a-layout>
-    <a-layout-content style="padding: 20px; background-color: #fff">
+    <a-layout-content class="default-layout">
       <router-view />
     </a-layout-content>
   </a-layout>
 </template>
 
-<style lang="less"></style>
+<style lang="less" scoped>
+.default-layout {
+  padding: 20px;
+  background-color: @layout-trigger-color;
+}
+</style>

@@ -13,7 +13,7 @@ meta:
       <sm-menu-1></sm-menu-1>
     </a-layout-sider>
 
-    <a-layout-sider :width="144" v-if="useRouter().currentRoute.value.meta.menu2">
+    <a-layout-sider v-if="useRouter().currentRoute.value.meta.menu2" :width="144">
       <sm-menu-2></sm-menu-2>
     </a-layout-sider>
 
