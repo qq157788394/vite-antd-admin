@@ -6,10 +6,10 @@
     </a-layout-header>
 
     <a-layout-content class="menu1-layout-content">
-      <a-menu theme="dark" v-model:selectedKeys="selectedKeys">
-        <a-menu-item v-for="item in 20" :key="item">
-          <icon-park type="tiktok" />
-          {{ `一级标题${item}` }}
+      <a-menu v-model:selectedKeys="selectedKeys" theme="dark" @click="handleClick">
+        <a-menu-item v-for="item in options" :key="item.key">
+          <icon-park :type="item.icon" />
+          {{ `一级标题${item.key}` }}
         </a-menu-item>
       </a-menu>
     </a-layout-content>
@@ -39,14 +39,33 @@ export default {
         alt: '黄悠悠',
         brandName: '店铺名称店铺名称店铺名称店铺名称'
       },
-      options: [
-        {
-          title: '一级1',
-          key: '1',
-          icon: 'tiktok'
-        }
-      ],
-      selectedKeys: [1]
+      options: [],
+      selectedKeys: [0]
+    }
+  },
+  mounted() {
+    this.mockMenu()
+  },
+  methods: {
+    handleClick(e) {
+      const currentPath = this.options.find((item) => item.key === e.key)
+      this.$router.push(currentPath)
+    },
+
+    // mock menu
+    mockMenu() {
+      const options = []
+      let i = 0
+      while (i < 10) {
+        options.push({
+          title: `一级导航${i}`,
+          key: i,
+          icon: 'tiktok',
+          path: '/utils'
+        })
+        i++
+      }
+      this.options = options
     }
   }
 }
@@ -55,6 +74,7 @@ export default {
 <style scoped lang="less">
 .menu1-layout {
   height: 100vh;
+  background-color: @primary-10;
 }
 
 .menu1-layout-header {

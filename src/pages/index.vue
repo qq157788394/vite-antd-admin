@@ -1,33 +1,48 @@
 <route lang="yaml">
 meta:
   layout: home
+  menu2: true
+  menu3: true
 </route>
-
 <template>
-  <div style="width: 350px">
-    <h4 class="mt-1">周中日期选择器</h4>
-    <sm-select-weekday class="w-100"></sm-select-weekday>
+  <a-row :gutter="16">
+    <a-col :span="12">
+      <h4 class="mt-1">周中日期选择器</h4>
+      <sm-select-weekday class="w-100"></sm-select-weekday>
+    </a-col>
 
-    <h4 class="mt-1">月中日期选择器</h4>
-    <sm-select-day class="w-100"></sm-select-day>
+    <a-col :span="12">
+      <h4 class="mt-1">月中日期选择器</h4>
+      <sm-select-day class="w-100"></sm-select-day>
+    </a-col>
 
-    <h4 class="mt-1">门店选择器</h4>
-    <sm-select-branch class="w-100"></sm-select-branch>
+    <a-col :span="12">
+      <h4 class="mt-1">门店选择器</h4>
+      <sm-select-branch class="w-100"></sm-select-branch>
+    </a-col>
 
-    <h4 class="mt-1">会员等级选择器</h4>
-    <sm-select-member-level class="w-100"></sm-select-member-level>
+    <a-col :span="12">
+      <h4 class="mt-1">会员等级选择器</h4>
+      <sm-select-member-level class="w-100"></sm-select-member-level>
+    </a-col>
 
-    <h4 class="mt-1">智能分群级联选择器</h4>
-    <sm-select-crowd class="w-100"></sm-select-crowd>
+    <a-col :span="12">
+      <h4 class="mt-1">智能分群级联选择器</h4>
+      <sm-select-crowd class="w-100"></sm-select-crowd>
+    </a-col>
 
-    <h4 class="mt-1">门店及分支机构选择器</h4>
-    <sm-tree-branch></sm-tree-branch>
+    <a-col :span="12">
+      <h4 class="mt-1">icon-park图标</h4>
+      <icon-park type="bill" theme="filled" />
+      <icon-park-bill theme="outline" />
+      <icon-park-bill theme="filled" />
+    </a-col>
 
-    <icon-park type="bill" theme="filled" />
-
-    <icon-park-bill theme="outline" />
-    <icon-park-bill theme="filled" />
-  </div>
+    <a-col :span="12">
+      <h4 class="mt-1">门店及分支机构选择器</h4>
+      <sm-tree-branch></sm-tree-branch>
+    </a-col>
+  </a-row>
 </template>
 
 <script>

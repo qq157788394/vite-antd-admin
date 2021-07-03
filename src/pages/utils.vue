@@ -1,3 +1,10 @@
+<route lang="yaml">
+meta:
+  layout: home
+  menu2: true
+  menu3: true
+</route>
+
 <template>
   <a-button type="primary" @click="currency">index pages</a-button>
   <div class="text">我是绿色的</div>
