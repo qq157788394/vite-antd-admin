@@ -32,5 +32,6 @@ export default {
 <style scoped lang="less">
 .sm-footer {
   text-align: center;
+  border-top: @border-width-base @border-style-base @divider-color;
 }
 </style>
