@@ -13,7 +13,7 @@ meta:
       <sm-menu-1></sm-menu-1>
     </a-layout-sider>
 
-    <a-layout-sider v-if="useRouter().currentRoute.value.meta.menu2" :width="144">
+    <a-layout-sider v-if="$router.currentRoute.value.meta.menu2" :width="144">
       <sm-menu-2></sm-menu-2>
     </a-layout-sider>
 
@@ -29,7 +29,7 @@ meta:
 
       <a-layout-content>
         <a-layout-content class="home-layout-page">
-          <sm-menu-3 v-if="useRouter().currentRoute.value.meta.menu3"></sm-menu-3>
+          <sm-menu-3 v-if="$router.currentRoute.value.meta.menu3"></sm-menu-3>
           <router-view />
         </a-layout-content>
 
@@ -39,9 +39,12 @@ meta:
   </a-layout>
 </template>
 
-<script setup>
-// eslint-disable-next-line no-unused-vars
-import { useRouter } from 'vue-router'
+<script>
+export default {
+  data() {
+    return {}
+  }
+}
 </script>
 
 <style scoped lang="less">
