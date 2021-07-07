@@ -4,6 +4,7 @@ import Vue from '@vitejs/plugin-vue'
 import Pages from 'vite-plugin-pages'
 import Layouts from 'vite-plugin-vue-layouts'
 import ViteComponents from 'vite-plugin-components'
+import styleImport from 'vite-plugin-style-import'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -30,5 +31,26 @@ export default defineConfig({
       '~/': `${path.resolve(__dirname, 'src')}/`
     }
   },
-  plugins: [Vue(), Pages(), Layouts(), ViteComponents()]
+  plugins: [
+    Vue(),
+    Pages(),
+    Layouts(),
+    ViteComponents(),
+    styleImport({
+      libs: [
+        {
+          libraryName: 'element-plus',
+          esModule: true,
+          ensureStyleFile: true,
+          resolveStyle: (name) => {
+            name = name.slice(3)
+            return `element-plus/packages/theme-chalk/src/${name}.scss`
+          },
+          resolveComponent: (name) => {
+            return `element-plus/lib/${name}`
+          }
+        }
+      ]
+    })
+  ]
 })

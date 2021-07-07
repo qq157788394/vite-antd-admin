@@ -5,13 +5,15 @@
       <a-typography-text ellipsis strong :content="`@ ${user.brandName}`" class="menu1-layout-name"></a-typography-text>
     </a-layout-header>
 
-    <a-layout-content class="menu1-layout-content">
-      <a-menu v-model:selectedKeys="selectedKeys" theme="dark" @click="handleClick">
-        <a-menu-item v-for="item in options" :key="item.key">
-          <icon-park :type="item.icon" />
-          {{ `一级标题${item.key}` }}
-        </a-menu-item>
-      </a-menu>
+    <a-layout-content>
+      <el-scrollbar noresize>
+        <a-menu v-model:selectedKeys="selectedKeys" theme="dark" @click="handleClick">
+          <a-menu-item v-for="item in options" :key="item.key">
+            <icon-park :type="item.icon" />
+            {{ `一级标题${item.key}` }}
+          </a-menu-item>
+        </a-menu>
+      </el-scrollbar>
     </a-layout-content>
 
     <a-layout-footer class="menu1-layout-footer">
@@ -92,9 +94,6 @@ export default {
   display: block;
   color: @text-color-dark;
   margin-top: 16px;
-}
-.menu1-layout-content {
-  overflow-y: auto;
 }
 
 .menu1-layout-footer {
