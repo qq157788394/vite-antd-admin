@@ -47,19 +47,17 @@ meta:
   <a-table :dataSource="dataSource" rowKey="goodsId" bordered>
     <a-table-column title="商品">
       <template #default="{ record }">
-        <a-row type="flex" :gutter="16" align="middle">
-          <a-col flex="none">
-            <a-avatar :size="72" shape="square" class="goodsAvatar" :src="record.goodsImg">
-              {{ record.goodsName }}
-            </a-avatar>
-          </a-col>
-          <a-col flex="auto">
-            <div class="strong">{{ record.goodsName }}</div>
-            <div class="goodsDesc">统计分类：{{ record.classification }}</div>
-            <div class="goodsDesc">自定义编号：{{ record.goodsCode }}</div>
-            <div class="goodsDesc">商品ID：{{ record.goodsId }}</div>
-          </a-col>
-        </a-row>
+        <sm-panel
+          :tag="record.status ? false : { color: 'warning', text: '禁售' }"
+          :avatar="true"
+          :title="record.goodsName"
+          :src="record.goodsImg"
+          :desc="[
+            { label: '统计分类', value: record.classification },
+            { label: '自定义编号', value: record.goodsCode },
+            { label: '商品ID', value: record.goodsId }
+          ]"
+        ></sm-panel>
       </template>
     </a-table-column>
     <a-table-column title="参考价格">
