@@ -43,10 +43,100 @@ meta:
       <sm-tree-branch></sm-tree-branch>
     </a-col>
   </a-row>
+
+  <a-table :dataSource="dataSource" rowKey="goodsId" bordered>
+    <a-table-column title="商品">
+      <template #default="{ record }">
+        <a-row type="flex" :gutter="16" align="middle">
+          <a-col flex="none">
+            <a-avatar :size="72" shape="square" class="goodsAvatar" :src="record.goodsImg">
+              {{ record.goodsName }}
+            </a-avatar>
+          </a-col>
+          <a-col flex="auto">
+            <div class="strong">{{ record.goodsName }}</div>
+            <div class="goodsDesc">统计分类：{{ record.classification }}</div>
+            <div class="goodsDesc">自定义编号：{{ record.goodsCode }}</div>
+            <div class="goodsDesc">商品ID：{{ record.goodsId }}</div>
+          </a-col>
+        </a-row>
+      </template>
+    </a-table-column>
+    <a-table-column title="参考价格">
+      <template #default="{ record }">
+        <span class="strong">
+          {{ $CNY($fen2yuan(record.price)) }}
+        </span>
+      </template>
+    </a-table-column>
+    <!-- <a-table-column title="统计分类" data-index="classification"></a-table-column> -->
+    <a-table-column title="售卖状态">
+      <template #default="{ record }">
+        <a-switch checked-children="可售" un-checked-children="禁售" v-model:checked="record.status" />
+      </template>
+    </a-table-column>
+    <a-table-column title="最后操作人">
+      <template #default="{ record }">
+        <div>{{ record.updateUser }}</div>
+        <div class="goodsDesc">{{ record.updateTime }}</div>
+      </template>
+    </a-table-column>
+    <a-table-column title="操作">
+      <template #default="{ record }">
+        <a-typography-link>详情</a-typography-link>
+      </template>
+    </a-table-column>
+  </a-table>
 </template>
 
 <script>
-export default {}
+export default {
+  data() {
+    return {
+      dataSource: [
+        {
+          goodsName: '商品名称1',
+          goodsCode: 'goodsCode1',
+          goodsId: 'goodsId1',
+          goodsImg: 'https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png',
+          status: true,
+          price: 29900,
+          classification: '分类1/分类2/分类3',
+          updateUser: '用户昵称1',
+          updateTime: '2021-7-15 22:15:40'
+        },
+        {
+          goodsName: '商品名称2',
+          goodsCode: 'goodsCode2',
+          goodsId: 'goodsId2',
+          status: false,
+          price: 11100,
+          classification: '分类1/分类2/分类3',
+          updateUser: '用户昵称1',
+          updateTime: '2021-7-15 22:15:40'
+        }
+      ],
+
+      columns: [
+        {
+          title: '姓名',
+          dataIndex: 'name',
+          key: 'name'
+        },
+        {
+          title: '年龄',
+          dataIndex: 'age',
+          key: 'age'
+        },
+        {
+          title: '住址',
+          dataIndex: 'address',
+          key: 'address'
+        }
+      ]
+    }
+  }
+}
 </script>
 
 <style lang="less">
@@ -56,5 +146,18 @@ export default {}
 
 .w-100 {
   width: 100%;
+}
+
+.strong {
+  font-weight: 500;
+}
+
+.goodsDesc {
+  font-size: @font-size-sm;
+  color: @text-color-secondary;
+}
+
+.goodsAvatar {
+  background-color: @primary-2;
 }
 </style>
