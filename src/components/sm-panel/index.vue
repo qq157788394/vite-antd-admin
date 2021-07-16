@@ -22,6 +22,19 @@
 </template>
 
 <script>
+/*
+<sm-panel
+  avatar
+  :src="record.goodsImg"
+  :title="record.goodsName"
+  :tag="record.status ? false : { color: 'warning', text: '禁售' }"
+  :desc="[
+    { label: '统计分类', value: record.classification },
+    { label: '自定义编号', value: record.goodsCode },
+    { label: '商品ID', value: record.goodsId }
+  ]"
+></sm-panel>
+ */
 export default {
   name: 'SmPanel',
   props: {
